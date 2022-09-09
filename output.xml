@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20220909 09:34:13.671" rpa="true" schemaversion="3">
+<suite id="s1" name="Add-Cart-Clothes" source="C:\Users\TinGooLeeCo\Documents\WS-Robot\Summer-Tshirt\add-cart-clothes.robot">
+<test id="s1-t1" name="Comprar camisa online" line="8">
+<kw name="Dado que eu esteja na MyStore">
+<kw name="New Browser" library="Browser">
+<arg>headless=false</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<msg timestamp="20220909 09:34:15.225" level="INFO">{"browser": "chromium", "headless": false, "handleSIGINT": true, "handleSIGTERM": true, "handleSIGHUP": true, "timeout": 30000.0, "devtools": false, "slowMo": 0.0, "tracesDir": "C:\\Users\\TinGooLeeCo\\Documents\\WS-Robot\\Summer-Tshirt\\browser\\traces\\fdd1d1a0-8c0a-48ce-9ec2-2d53bbd499b9"}</msg>
+<msg timestamp="20220909 09:34:16.053" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"handleSIGINT":true,"handleSIGTERM":true,"handleSIGHUP":true,"timeout":30000,"devtools":false,"slowMo":0,"tracesDir":"C:\\Users\\TinGooLeeCo\\Documents\\WS-Robot\\Summer-Tshirt\\browser\\traces\\fdd1d1a0-8c0a-48ce-9ec2-2d53bbd499b9"}</msg>
+<status status="PASS" starttime="20220909 09:34:15.224" endtime="20220909 09:34:16.053"/>
+</kw>
+<kw name="New Context" library="Browser">
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<msg timestamp="20220909 09:34:16.056" level="INFO">{"acceptDownloads": true, "ignoreHTTPSErrors": false, "bypassCSP": false, "deviceScaleFactor": 1.0, "isMobile": false, "hasTouch": false, "javaScriptEnabled": true, "offline": false, "hideRfBrowser": false, "reducedMotion": "no-preference", "forcedColors": "none"}</msg>
+<msg timestamp="20220909 09:34:16.125" level="INFO">Successfully created context. </msg>
+<msg timestamp="20220909 09:34:16.125" level="INFO">{'acceptDownloads': True, 'ignoreHTTPSErrors': False, 'bypassCSP': False, 'deviceScaleFactor': 1, 'isMobile': False, 'hasTouch': False, 'javaScriptEnabled': True, 'offline': False, 'hideRfBrowser': False, 'reducedMotion': 'no-preference', 'forcedColors': 'none'}</msg>
+<status status="PASS" starttime="20220909 09:34:16.053" endtime="20220909 09:34:16.126"/>
+</kw>
+<kw name="New Page" library="Browser">
+<arg>http://automationpractice.com/index.php</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<msg timestamp="20220909 09:34:21.027" level="INFO">Successfully initialized new page object and opened url: http://automationpractice.com/index.php</msg>
+<status status="PASS" starttime="20220909 09:34:16.126" endtime="20220909 09:34:21.027"/>
+</kw>
+<status status="PASS" starttime="20220909 09:34:15.223" endtime="20220909 09:34:21.028"/>
+</kw>
+<kw name="Quando pesquisar Summer">
+<kw name="Type Text" library="Browser">
+<arg>//*[@id="search_query_top"]</arg>
+<arg>Summer</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20220909 09:34:21.029" level="INFO">Types the text 'Summer' in the given field.</msg>
+<status status="PASS" starttime="20220909 09:34:21.029" endtime="20220909 09:34:21.154"/>
+</kw>
+<kw name="Keyboard Key" library="Browser">
+<arg>press</arg>
+<arg>Enter</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Press a keyboard key on the virtual keyboard or set a key up or down.</doc>
+<status status="PASS" starttime="20220909 09:34:21.154" endtime="20220909 09:34:21.181"/>
+</kw>
+<status status="PASS" starttime="20220909 09:34:21.028" endtime="20220909 09:34:21.182"/>
+</kw>
+<kw name="Entao clico em T-shirts">
+<kw name="Click" library="Browser">
+<arg>//*[@id="block_top_menu"]/ul/li[3]/a</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20220909 09:34:21.183" endtime="20220909 09:34:26.738"/>
+</kw>
+<status status="PASS" starttime="20220909 09:34:21.182" endtime="20220909 09:34:26.739"/>
+</kw>
+<kw name="Entao adiciono item ao carrinho">
+<kw name="Click" library="Browser">
+<arg>//*[@id="center_column"]/ul/li/div</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20220909 09:34:26.740" endtime="20220909 09:34:27.455"/>
+</kw>
+<kw name="Hover" library="Browser">
+<arg>//*[@class="product-container"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Moves the virtual mouse and scrolls to the element found by ``selector``.</doc>
+<status status="PASS" starttime="20220909 09:34:27.455" endtime="20220909 09:34:27.539"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>//*[@id="center_column"]/ul/li[1]/div/div[2]/div[2]/a[1]/span</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20220909 09:34:27.540" endtime="20220909 09:34:27.637"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220909 09:34:30.651" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220909 09:34:27.637" endtime="20220909 09:34:30.651"/>
+</kw>
+<kw name="Take Screenshot" library="Browser">
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<msg timestamp="20220909 09:34:30.955" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-1.png"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220909 09:34:30.651" endtime="20220909 09:34:30.955"/>
+</kw>
+<status status="PASS" starttime="20220909 09:34:26.739" endtime="20220909 09:34:30.956"/>
+</kw>
+<status status="PASS" starttime="20220909 09:34:15.218" endtime="20220909 09:34:30.956"/>
+</test>
+<status status="PASS" starttime="20220909 09:34:13.674" endtime="20220909 09:34:31.134"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tasks</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Add-Cart-Clothes">Add-Cart-Clothes</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
